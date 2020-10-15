@@ -52,6 +52,13 @@ client.connect(err => {
 
     })
 
+    app.get('/getServices', (req, res) => {
+        servicesCollection.find({})
+        .toArray((err, documents) => {
+            res.send(documents)
+        })
+    })
+
 });
 
 app.listen(process.env.PORT || port, console.log('Database Running on Port', port))
