@@ -15,7 +15,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-    res.send('Creative Agency Server is Working!')
+    res.send('Creative Agency Server is Working and connected with database!')
 })
 
 const client = new MongoClient(uri, { useNewUrlParser: true , useUnifiedTopology: true });
